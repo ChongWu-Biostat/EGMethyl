@@ -1,0 +1,24 @@
+PLINK v1.90b1g 64-bit (10 Jun 2014)
+13 arguments: --bfile step2_chr21 --geno 0.05 --hwe 0.000001 --maf 0.05 --make-bed --mind 0.1 --out 1000G.EUR.METHY2.CHR21
+Hostname: ln0004
+Working directory: /panfs/roc/groups/1/panwei/wuxx0845/1000Genomes
+Start time: Tue Oct 24 22:22:43 2017
+
+Random number seed: 1508901763
+64293 MB RAM detected; reserving 32146 MB for main workspace.
+1105538 variants loaded from .bim file.
+503 people (0 males, 0 females, 503 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to 1000G.EUR.METHY2.CHR21.nosex .
+0 people removed due to missing genotype data (--mind).
+Using 1 thread (no multithreaded calculations invoked).
+Calculating allele frequencies... done.
+Total genotyping rate is 0.999831.
+676 variants removed due to missing genotype data (--geno).
+--hwe: 3003 variants removed due to Hardy-Weinberg exact test.
+1003480 variants removed due to MAF threshold(s) (--maf/--max-maf).
+98379 variants and 503 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to 1000G.EUR.METHY2.CHR21.bed + 1000G.EUR.METHY2.CHR21.bim +
+1000G.EUR.METHY2.CHR21.fam ... done.
+
+End time: Tue Oct 24 22:22:44 2017
