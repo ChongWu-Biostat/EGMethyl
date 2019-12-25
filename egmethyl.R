@@ -16,7 +16,7 @@ suppressMessages(library("optparse"))
 
 option_list = list(
 make_option("--sumstats", action="store", default=NA, type='character',
-help="summary statistics (rds file and must have SNP and Z column headers) [required]"),
+help="summary statistics (txt file and must have SNP and Z column headers) [required]"),
 make_option("--out", action="store", default=NA, type='character',
 help="Path to output files [required]"),
 make_option("--out_name", action="store", default=NA, type='character',
