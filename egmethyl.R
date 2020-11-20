@@ -144,9 +144,16 @@ out.fun <-function(w) {
         " --extract ",tmp.snp.filename," --maf 0.05 --make-bed --out ",outd,"/test_",genename))
         
         # Load in reference data
-        genos = read_plink(paste0(outd,"/test_",genename),impute="avg")
-        system(paste0("rm ",outd,"/test_",genename,"*"))
-        system(paste0("rm ",tmp.snp.filename))
+        if(file.exists(paste(outd,"/test_",genename,".bed",sep=""))) {
+            genos = read_plink(paste0(outd,"/test_",genename),impute="avg")
+            system(paste0("rm ",outd,"/test_",genename,"*"))
+            system(paste0("rm ",tmp.snp.filename))
+        } else {
+            system(paste0("rm ",outd,"/test_",genename,"*"))
+            system(paste0("rm ",tmp.snp.filename))
+            return(rep(NA,5))
+        }
+
         
         genos.bim.all = genos$bim
         genos.bim.all = genos.bim.all[nchar(genos.bim.all[,5]) ==1 & nchar(genos.bim.all[,6]) ==1,]
